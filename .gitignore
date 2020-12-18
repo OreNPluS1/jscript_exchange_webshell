@@ -146,3 +146,8 @@ redacted/
 *.gz
 output.txt
 SharpDump.exe
+Default/
+*.zip
+*.b64
+script.ps1
+exchange attack/

