@@ -1417,6 +1417,7 @@ function Get-SharpHoundACL ([string]$sharpHoundLocation, $isNewVersion) {
         $arg = "-d $($global:ldapConnInfo.domain) -c acl --CSVPrefix $($fileName) --NoSaveCache"
     }
 
+    Write-Status "Running $($sharpHoundLocation) with $($arg)"
     Invoke-Cmd -cmd $sharpHoundLocation -argV $arg
 
     $stillRuns     = $true
