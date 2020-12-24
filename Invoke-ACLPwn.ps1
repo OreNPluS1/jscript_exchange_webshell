@@ -1423,7 +1423,7 @@ function Get-SharpHoundACL ([string]$sharpHoundLocation, $isNewVersion) {
     
     # Sleep a little, check if file exists if we wake up
     Start-Sleep $sleepInterval
-    $file = Get-ChildItem -Filter "$fileName"
+    $file = Get-ChildItem "$fileName"
     if ($file -ne $null) {
         return $file[0].FullName
     }
@@ -1451,7 +1451,7 @@ function Get-SharpHoundACL ([string]$sharpHoundLocation, $isNewVersion) {
     }while ($stillRuns)
     
     # Check for file with given prefix
-    $file = Get-ChildItem -Filter "$fileName"
+    $file = Get-ChildItem "$fileName"
     Write-Status "trying to read $($fileName) "
     if ($file -eq $null) {
         Write-Error '[Get-SharpHoundACL] No ACL input available.'
