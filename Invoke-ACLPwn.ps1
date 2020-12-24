@@ -1731,10 +1731,10 @@ $ACL = Import-JsonACL -sharpHoundZipFileLocation $aclInputPath
 Write-Status "Found $($ACL.Count) ACLs"
 
 # Iterate writeDACL and fullcontrol permissions on the domain object
-$domainObjectTypeName = "domain"
-if ($isnewSharpHoundVersion) {
-    $domainObjectTypeName = "domains" # dunno if typo?
-}
+#$domainObjectTypeName = "domain"
+#if ($isnewSharpHoundVersion) {
+$domainObjectTypeName = "domains" # dunno if typo?
+#}
 
 $domainACL       = $ACL | Where-Object {$_.ObjectType -eq $domainObjectTypeName}
 $writeDACLDomain = $domainACL | Where-Object {$_.ActiveDirectoryRights -eq 'WriteDacl'}
