@@ -1718,7 +1718,7 @@ $global:ADInfo.extendedRights = Get-ExtendedRights
 Write-Status "Found $($global:ADInfo.extendedRights.Count) extended rights"
 
 # Run Sharphound to collect ACL of the target domain
-$isnewSharpHoundVersion = Is-NewSharphoundVersion -sharphoundLocation $SharpHoundLocation
+$isnewSharpHoundVersion = $true
 $aclInputPath = Get-SharpHoundACL -sharpHoundLocation $sharpHoundLocation  -isNewVersion $isnewSharpHoundVersion
 $global:filesCreated += $aclPath
 
