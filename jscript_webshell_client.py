@@ -6,7 +6,7 @@ import warnings
 HOST = "34.68.42.174"
 URL = "/owa/auth/logout.aspx"
 GET_PARAMETERS = "?passwd=aaaaaa"
-OUT_FILE = "output25.txt"
+OUT_FILE = "output21.txt"
 
 
 def base64_encode(text):
