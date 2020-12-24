@@ -1739,6 +1739,7 @@ $domainObjectTypeName = "domains" # dunno if typo?
 $domainACL       = $ACL | Where-Object {$_.ObjectType -eq $domainObjectTypeName}
 $writeDACLDomain = $domainACL | Where-Object {$_.ActiveDirectoryRights -eq 'WriteDacl'}
 $writeDACLDomain += $domainACL | Where-Object {$_.ActiveDirectoryRights -eq 'GenericAll'}
+Write-Output $writeDACLDomain
 
 # Arrays with permissions
 $currWriteDaclPerm = @()
