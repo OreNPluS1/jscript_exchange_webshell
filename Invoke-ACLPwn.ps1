@@ -1754,8 +1754,8 @@ Write-Good 'Got WriteDACL permissions.'
 Repl-Pwn
 
 # Done.
-Invoke-Cleanup
-return
+#Invoke-Cleanup
+#return
 #}
 
 # with these permissions we can possibly pwn via another way
