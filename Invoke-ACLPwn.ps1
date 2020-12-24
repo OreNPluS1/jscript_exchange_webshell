@@ -1409,13 +1409,9 @@ function Get-SharpHoundACL ([string]$sharpHoundLocation, $isNewVersion) {
     $fileName = [string]::Empty
     $arg = [string]::Empty
 
-    if ($True){
-        $fileName = "{0}.zip" -f [datetime]::Now.ToFileTime()
-        $arg = "$($global:ldapConnInfo.domain) -c acl --ZipFileName $($fileName) --NoSaveCache"
-    } else {
-        $fileName = "{0}" -f [datetime]::Now.ToFileTime()
-        $arg = "-d $($global:ldapConnInfo.domain) -c acl --CSVPrefix $($fileName) --NoSaveCache"
-    }
+
+    $fileName = "{0}.zip" -f [datetime]::Now.ToFileTime()
+    $arg = "$($global:ldapConnInfo.domain) -c acl --ZipFileName $($fileName) --NoSaveCache"
 
     Write-Status "Running $($sharpHoundLocation) with $($arg)"
     Invoke-Cmd -cmd $sharpHoundLocation -argV $arg
