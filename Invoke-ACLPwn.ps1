@@ -1740,6 +1740,7 @@ $domainACL       = $ACL | Where-Object {$_.ObjectType -eq $domainObjectTypeName}
 $writeDACLDomain = $domainACL | Where-Object {$_.ActiveDirectoryRights -eq 'WriteDacl'}
 $writeDACLDomain += $domainACL | Where-Object {$_.ActiveDirectoryRights -eq 'GenericAll'}
 Write-Output $writeDACLDomain
+Write-Output $groupMembership
 
 # Arrays with permissions
 $currWriteDaclPerm = @()
