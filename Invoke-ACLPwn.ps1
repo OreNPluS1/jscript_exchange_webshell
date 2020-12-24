@@ -1733,13 +1733,13 @@ Write-Status "Found $($ACL.Count) ACLs"
 # Iterate writeDACL and fullcontrol permissions on the domain object
 #$domainObjectTypeName = "domain"
 #if ($isnewSharpHoundVersion) {
-$domainObjectTypeName = "domains" # dunno if typo?
+$domainObjectTypeName = "domain" # dunno if typo?
 #}
 
 $domainACL       = $ACL | Where-Object {$_.ObjectType -eq $domainObjectTypeName}
 $writeDACLDomain = $domainACL | Where-Object {$_.ActiveDirectoryRights -eq 'WriteDacl'}
 $writeDACLDomain += $domainACL | Where-Object {$_.ActiveDirectoryRights -eq 'GenericAll'}
-Write-Output $writeDACLDomain
+Write-Output $ACL
 Write-Output $groupMembership
 
 # Arrays with permissions
