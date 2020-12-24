@@ -1727,11 +1727,7 @@ if ($aclInputPath -eq $null) {
 }
 
 # Import csv
-if ($isnewSharpHoundVersion){
-    $ACL = Import-JsonACL -sharpHoundZipFileLocation $aclInputPath
-} else{
-    $ACL = Import-CSVACL -csvLocation $aclInputPath
-}
+$ACL = Import-JsonACL -sharpHoundZipFileLocation $aclInputPath
 Write-Status "Found $($ACL.Count) ACLs"
 
 # Iterate writeDACL and fullcontrol permissions on the domain object
