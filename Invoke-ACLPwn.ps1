@@ -1455,6 +1455,7 @@ function Get-SharpHoundACL ([string]$sharpHoundLocation, $isNewVersion) {
     
     # Check for file with given prefix
     $file = Get-ChildItem -Filter "$fileName*"
+    Write-Status "trying to read $($fileName) "
     if ($file -eq $null) {
         Write-Error '[Get-SharpHoundACL] No ACL input available.'
         return $null

