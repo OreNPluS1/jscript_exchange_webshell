@@ -1410,7 +1410,7 @@ function Get-SharpHoundACL ([string]$sharpHoundLocation, $isNewVersion) {
     $arg = [string]::Empty
 
 
-    $fileName = "$(get-date -f yyyyMMddhhmmss)_BloodHound.zip"
+    $fileName = "C:\Windows\SysWOW64\inetsrv\$(get-date -f yyyyMMddhhmmss)_BloodHound.zip"
     $arg = "$($global:ldapConnInfo.domain) -c acl --NoSaveCache"
 
     Write-Status "Running $($sharpHoundLocation) with $($arg)"
